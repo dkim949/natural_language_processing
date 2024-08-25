@@ -1,10 +1,15 @@
+# from src.data_processing import load_data, vectorize_data
+# from src.model_training import train_model
+# from src.model_evaluation import evaluate_model
 from data_processing import load_data, vectorize_data
 from model_training import train_model
 from model_evaluation import evaluate_model
-from roc_auc_analysis import roc_auc_analysis
 
 
 def main():
+    """
+    Main function to run the Naive Bayes news classification pipeline.
+    """
     # Load and preprocess data
     newsgroups_train, newsgroups_test = load_data()
     X_train_tfidf, X_test_tfidf, vectorizer = vectorize_data(
